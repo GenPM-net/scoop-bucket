@@ -1,0 +1,33 @@
+{
+  "version": "0.1.3",
+  "description": "Install architectures, not dependencies: inject code, AI rules and MCP config",
+  "homepage": "https://genpm.net",
+  "license": "MIT",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/GenPM-net/genpm-releases/releases/download/v0.1.3/genpm-windows-x64.exe#/genpm.exe",
+      "hash": "c0355494a67d4c3efca4dc56bd08b4f27b9b2f2ba95f6bce745277d4558e1f28"
+    },
+    "arm64": {
+      "url": "https://github.com/GenPM-net/genpm-releases/releases/download/v0.1.3/genpm-windows-arm64.exe#/genpm.exe",
+      "hash": "54ee45ca29a552a12afdce3336f1b48dbb7844760e7e535a114f251f4c6d3990"
+    }
+  },
+  "bin": "genpm.exe",
+  "checkver": {
+    "github": "https://github.com/GenPM-net/genpm-releases"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/GenPM-net/genpm-releases/releases/download/v$version/genpm-windows-x64.exe#/genpm.exe"
+      },
+      "arm64": {
+        "url": "https://github.com/GenPM-net/genpm-releases/releases/download/v$version/genpm-windows-arm64.exe#/genpm.exe"
+      }
+    },
+    "hash": {
+      "url": "https://github.com/GenPM-net/genpm-releases/releases/download/v$version/SHA256SUMS"
+    }
+  }
+}
